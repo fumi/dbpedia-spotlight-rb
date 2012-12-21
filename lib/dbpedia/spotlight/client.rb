@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 require "httparty"
+require "json"
 
 module DBpedia
   module Spotlight
@@ -20,7 +21,9 @@ module DBpedia
           :confidence => 0,
           :support => 0
         })
-        self.class.get(@endpoint + "annotate", { :query => options })
+        response = self.class.get(@endpoint + "annotate", { :query => options })
+        json = JSON.parse(response.body)
+        json["Resources"]
       end
     end
   end
