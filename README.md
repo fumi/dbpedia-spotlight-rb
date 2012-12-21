@@ -18,10 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
+    #!/usr/bin/env ruby
     require 'dbpedia/spotlight'
 
-    client = DBpedia::Spotlight("http://spotlight.dbpedia.org/rest/")
-    annotations = client.annotate("President Obama ....")
+    spotlight = DBpedia::Spotlight("http://spotlight.dbpedia.org/rest/")
+    annotations = spotlight.annotate("President Obama ....")
     annotations.each do |annotation|
       puts annotation.inspect
     end
