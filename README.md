@@ -1,12 +1,12 @@
-# Dbpedia::Spotlight::Rb
+# DBpedia::Spotlight
 
-TODO: Write a gem description
+A simple ruby inteface for [DBpedia Spotlight](https://github.com/dbpedia-spotlight/dbpedia-spotlight">DBpedia Spotlight)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'dbpedia-spotlight-rb'
+    gem 'dbpedia-spotlight'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install dbpedia-spotlight-rb
+    $ gem install dbpedia-spotlight
 
 ## Usage
 
@@ -27,3 +27,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Authors
+
+* [Fumihiro Kato](https://github.com/fumi)
