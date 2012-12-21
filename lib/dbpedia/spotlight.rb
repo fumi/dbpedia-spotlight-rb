@@ -3,6 +3,6 @@ require "dbpedia/spotlight/version"
 
 module DBpedia
   module Spotlight
-    autoload :Client, "dbpedia/spotlight/client"
+    autoload :Client, "spotlight/client"
   end
 end
