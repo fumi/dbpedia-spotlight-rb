@@ -22,9 +22,9 @@ Or install it yourself as:
     require 'dbpedia/spotlight'
 
     spotlight = DBpedia::Spotlight("http://spotlight.dbpedia.org/rest/")
-    annotations = spotlight.annotate("President Obama ....")
-    annotations.each do |annotation|
-      puts annotation.inspect
+    entities = spotlight.annotate("President Obama ....")
+    entities.each do |entity|
+      puts entity.inspect
     end
 
 ## Contributing
