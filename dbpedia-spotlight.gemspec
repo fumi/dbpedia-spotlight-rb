@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "dbpedia-spotlight"
   gem.require_paths = ["lib"]
   gem.version       = DBpedia::Spotlight::VERSION
+
+  gem.add_runtime_dependency  "httparty",   ">= 0.8.3"
 end
