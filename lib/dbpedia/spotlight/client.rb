@@ -1,16 +1,17 @@
 # -*- encoding: utf-8 -*-
-require "dbpedia/spotlight/version"
 require "httparty"
 
 module DBpedia
   module Spotlight
     class Client
+      DEFAULT_ENDPOINT_URI = "http://spotlight.dbpedia.org/rest/"
+
       include HTTParty
-      headers "Accept" => "applicaiton/json"
+      headers "Accept" => "application/json"
       format :json
 
-      def initialize(endpoint)
-        @endpoint = endpoint
+      def initialize(endpoint = nil)
+        @endpoint = endpoint || DEFAULT_ENDPOINT_URI
       end
 
       def annotate(text, options = {}) 
@@ -19,8 +20,7 @@ module DBpedia
           :confidence => 0,
           :support => 0
         })
-        response = self.class.get(@endpoint, { :query => options })
-        puts response
+        self.class.get(@endpoint + "annotate", { :query => options })
       end
     end
   end
