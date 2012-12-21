@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'dbpedia/spotlight'
+
+    client = DBpedia::Spotlight("http://spotlight.dbpedia.org/rest/")
+    annotations = client.annotate("President Obama ....")
+    annotations.each do |annotation|
+      puts annotation.inspect
+    end
 
 ## Contributing
 
