@@ -6,7 +6,7 @@ A simple ruby inteface for [DBpedia Spotlight](https://github.com/dbpedia-spotli
 
 Add this line to your application's Gemfile:
 
-    gem 'dbpedia/spotlight'
+    gem 'dbpedia-spotlight'
 
 And then execute:
 
